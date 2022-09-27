@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>IP Address Tracker</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
 
-  IP Address Tracker
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form action="#">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <input type="submit"/>
+      </form>
+    </header>
 
-  Search for any IP address or domain
+    <main>
+      <div class="info-section">
+        IP Address 000.000.000.000
+        Location N/A
+        Timezone UTC - 0:00
+        ISP N/A
+      </div>
+    </main>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-</body>
+  </body>
 </html>
