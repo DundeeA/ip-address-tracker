@@ -11,26 +11,37 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+
+    <!--Map dependencies-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
     <title>IP Address Tracker</title>
   </head>
   <body>
-
     <header>
       <h1>IP Address Tracker</h1>
       <form action="#">
         <input type="text" placeholder="Search for any IP address or domain" />
-        <input type="submit"/>
+        <input type="submit" />
       </form>
     </header>
-
+ 
     <main>
       <div class="info-section">
-        IP Address 000.000.000.000
-        Location N/A
-        Timezone UTC - 0:00
-        ISP N/A
+        IP Address 000.000.000.000 Location N/A Timezone UTC - 0:00 ISP N/A
       </div>
-    </main>
 
+      <div id="map"></div>
+    </main>
+ 
+    <script src="./Javascript/app.js"></script>
   </body>
 </html>
