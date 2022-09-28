@@ -1,4 +1,4 @@
-let map = L.map("map").setView([0, 0], 2.5);
+let map = L.map("map").setView([0,0],2.5);
 
 //Set maps tile (the map appearance/colors)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
@@ -7,10 +7,21 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 	maxZoom: 20
 }).addTo(map);
 
-// Create marker and focus view on it (Takes an array for the cords)
+
+//Create marker icon
+let MarkerIcon = L.icon({
+  iconUrl: '../images/icon-location.svg',
+
+  iconSize:     [50, 60], // size of the icon
+  shadowSize:   [50, 64], // size of the shadow
+  iconAnchor:   [50, 40], // point of the icon which will correspond to marker's location
+  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+// Spawn marker and focus view on it (Takes an array for the cords)
 function updateView(cords = [0, 0]) {
-  L.marker(cords).addTo(map);
-  map.setView(cords, 18);
+  L.marker(cords, {icon: MarkerIcon}).addTo(map);
+  map.setView(cords, 14);
 }
 
 //Fetch IP location
@@ -39,6 +50,8 @@ ipform.addEventListener("submit", (e) => {
     ipinput.value = "";
     console.log("Sucess!!!");
   } else {
-    alert("Invalid ip address!");
+    if(ipinput.value.trim().length !== 0){
+      alert("Invalid ip address!");
+    } 
   }
 });
