@@ -12,7 +12,6 @@
       href="./images/favicon-32x32.png"
     />
 
-
     <!--Map dependencies-->
     <link
       rel="stylesheet"
@@ -23,14 +22,17 @@
     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
    crossorigin=""></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
     <title>IP Address Tracker</title>
   </head>
   <body>
     <header>
       <h1>IP Address Tracker</h1>
-      <form action="#">
-        <input type="text" placeholder="Search for any IP address or domain" />
-        <input type="submit" />
+      <form class="ip-form" action="#">
+        <input class="ip-input" type="text" placeholder="Search for any IP address or domain" />
+        <input class="submit-btn" type="submit" />
       </form>
     </header>
  
