@@ -22,18 +22,18 @@ let MarkerIcon = L.icon({
 function updateView(cords = [0, 0]) {
   L.marker(cords, {icon: MarkerIcon}).addTo(map);
   map.setView(cords, 14);
+  console.log('set new view to ' + cords);
 }
 
 //Fetch IP location
-let ip = "107.77.198.65"; //get this value from the text input
 let api_key = "at_MeEeSaIGcpXCKc2mFqNPgaqDrYQ2e";
-function getLocation() {
+function getLocation(ip) {
   $.ajax({
     url: "https://geo.ipify.org/api/v1",
     data: { apiKey: api_key, ipAddress: ip },
     success: function (data) {
-      alert("check console");
       console.log(data);
+      updateView([data.location.lat, data.location.lng]);
     },
   });
 }
@@ -42,13 +42,14 @@ function getLocation() {
 let ipform = document.querySelector(".ip-form");
 let ipinput = document.querySelector(".ip-input");
 
+
 ipform.addEventListener("submit", (e) => {
   e.preventDefault();
   let ipformat =
     /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
   if (ipinput.value.match(ipformat)) {
+    getLocation(ipinput.value);
     ipinput.value = "";
-    console.log("Sucess!!!");
   } else {
     if(ipinput.value.trim().length !== 0){
       alert("Invalid ip address!");
