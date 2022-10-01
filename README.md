@@ -11,7 +11,7 @@ This is our solution to the [IP tracker challenge]() on Frontend Mentor. Fronten
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
+- [Authors](#authors)
 
 
 ### Screenshot
@@ -34,6 +34,6 @@ This is our solution to the [IP tracker challenge]() on Frontend Mentor. Fronten
 
 ### What I learned
 
-## Author
-- github - [@junmian](https://github.com/junmian)
-- Github - [@DundeeA](https://github.com/DundeeA)
+## Authors
+- GitHub - [@junmian](https://github.com/junmian)
+- GitHub - [@DundeeA](https://github.com/DundeeA)
