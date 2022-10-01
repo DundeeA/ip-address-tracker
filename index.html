@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./styles/index.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
     <!--Map dependencies-->
     <link
@@ -19,11 +14,12 @@
       integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
       crossorigin=""
     />
-    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
-   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
-   crossorigin=""></script>
-   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+    <script
+      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+      crossorigin=""
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <title>IP Address Tracker</title>
   </head>
@@ -35,22 +31,33 @@
         <input class="submit-btn" type="submit" />
       </form>
     </header>
- 
+
     <main>
-       <div class="info-section">
-         <p class="ip-title">IP Address</p>
-         <p class="ip"></p> <!-- edited Javascript-->
-         <p class="location-title">Location</p>
-         <p class="location"></p><!-- edited Javascript-->
-         <p class="timezone-title">Timezone</p>
-         <p class="timez"></p><!-- edited Javascript-->
-         <p class="isp-title">ISP</p>
-         <p class="isp"></p><!-- edited Javascript-->
+      <div class="info-section">
+        <div class="ip-title">
+          <p>IP Address</p>
+          <div class="ip"><p>192...</p></div> <!-- Hardcoded placeholder text for visual -->
+        </div><!-- edited Javascript-->
+
+        <div class="location-title">
+          <p>Location</p>
+          <div class="location"><p>Brooklyn, NY</p></div>
+        </div><!-- edited Javascript-->
+        
+        <div class="timezone-title">
+          <p>Timezone</p>
+          <div class="timez"><p>UTC -05:00</p></div>
+        </div><!-- edited Javascript-->
+        
+        <div class="isp-title">
+          <p>ISP</p>
+          <div class="isp"><p>SpaceX Starlink</p></div>
+        </div><!-- edited Javascript-->
       </div>
 
       <div id="map"></div>
     </main>
- 
+
     <script src="./Javascript/app.js"></script>
   </body>
 </html>
