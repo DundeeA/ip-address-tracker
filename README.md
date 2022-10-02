@@ -1,6 +1,6 @@
 # Frontend Mentor - IP Tracker
 
-This is our solution to the [IP tracker challenge]() on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is our solution to the [IP tracker challenge](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/ip-address-tracker-l8rnEECrQG) on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -19,7 +19,7 @@ This is our solution to the [IP tracker challenge]() on Frontend Mentor. Fronten
 ![](./desktop.png)
 
 ### Links
-- Live Site URL: [Live Site]()
+- Live Site URL: [Live Site](https://dundeea.github.io/ip-address-tracker/)
 
 ## My process
 
@@ -27,9 +27,9 @@ This is our solution to the [IP tracker challenge]() on Frontend Mentor. Fronten
 ### Built with
 
 - Semantic HTML5 markup
-- SASS
-- Flexbox
 - Jquery
+- API
+- CSS
 
 
 ### What I learned

@@ -56,3 +56,12 @@ ipform.addEventListener("submit", (e) => {
     } 
   }
 });
+
+
+//Manipulate the DOM to display the ip information
+function updateInfo(ip,loc,tz,isp){
+$('.ip').text(ip);
+$('.location').text(loc);
+$('.timez').text(tz);
+$('.isp').text(isp);
+}
