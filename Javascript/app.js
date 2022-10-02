@@ -34,6 +34,9 @@ function getLocation(ip) {
     success: function (data) {
       console.log(data);
       updateView([data.location.lat, data.location.lng]);
+
+      let fullLocation = data.location.city + ', ' + data.location.region + ', ' + data.location.postalCode;
+      updateInfo(data.ip,fullLocation.toString(), data.location.timezone, data.isp);
     },
   });
 }
