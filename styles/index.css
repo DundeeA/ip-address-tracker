@@ -80,27 +80,27 @@ input[type=text] {
 /* ========================= */
 
 /* Extra large screens, TV */
-@media (min-width: 1201px) {
+@media only screen and (min-width: 1201px) {
 
 }
 
 /* Desktops, large screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
 
 }
 
 /* Small screens, laptops */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
 
 }
 
 /* iPads, Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 
   }
 
 /* Mobile devices */
-@media (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .leaflet-container .leaflet-control-zoom-in {
         display: block;
     }
