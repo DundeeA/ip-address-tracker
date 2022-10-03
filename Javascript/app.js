@@ -10,7 +10,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 //Create marker icon
 let MarkerIcon = L.icon({
-  iconUrl: '../images/icon-location.svg',
+  iconUrl: './images/icon-location.svg',
 
   iconSize:     [50, 60], // size of the icon
   shadowSize:   [50, 64], // size of the shadow
