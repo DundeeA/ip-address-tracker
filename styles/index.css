@@ -1,7 +1,9 @@
+/* Global styles */
 body {
     margin: 0;
 }
 
+/* Header */
 header {
     background-image: url("../images/pattern-bg.png");
     height: 250px;
@@ -26,6 +28,7 @@ input[type=text] {
     font-size: 1em;
   }
 
+/* Info Section */
 .info-section {
     display: flex; 
     justify-content: center;
@@ -55,9 +58,53 @@ input[type=text] {
     padding-top: -5px;
 }
 
+/* Zoom in and Zoom out controls */
+.leaflet-container .leaflet-control-zoom-in {
+    display: none;
+}
+
+.leaflet-container .leaflet-control-zoom-out {
+    display: none;
+}
+
+/* Map */
 #map {
     height: 790px;
     width: 100%; 
     margin-top: -60px;
     z-index: 1;
 }
+
+/* ========================= */
+/* ----- Media Queries ----- */
+/* ========================= */
+
+/* Extra large screens, TV */
+@media (min-width: 1201px) {
+
+}
+
+/* Desktops, large screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+/* Small screens, laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  }
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+    .leaflet-container .leaflet-control-zoom-in {
+        display: block;
+    }
+    .leaflet-container .leaflet-control-zoom-out {
+        display: block;
+    }
+  }
