@@ -68,3 +68,13 @@ $('.location').text(loc);
 $('.timez').text(tz);
 $('.isp').text(isp);
 }
+
+
+
+
+
+function toggleLight(){
+
+
+  
+}
