@@ -19,9 +19,11 @@ if(lightmode === true){
   }).addTo(map);
 }
 }
-
-//When clicking the light switch  ,  do   lightmode = !lightmode; toggleLight();
-
+//Switch between lightmode and dark mode
+$('.light-switch').click(function(){
+    lightmode = !lightmode;
+    toggleLight();
+});
 
 
 //Create marker icon
