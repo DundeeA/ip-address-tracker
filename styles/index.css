@@ -65,6 +65,11 @@ input.submit-btn {
 
 .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
     text-transform: uppercase;
+    font-weight: 800;
+    opacity: 0.5;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: -10px;
 }
 
 .ip, .location, .timez, .isp {
