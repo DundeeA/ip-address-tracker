@@ -2,12 +2,21 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 /* Header */
 header {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
     background-image: url("../images/pattern-bg.png");
-    height: 250px;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+    height: 35.2vh;
+    width: 100vw;
+    z-index: 10;
 }
 
 header form {
@@ -23,36 +32,74 @@ h1 {
 }
 
 /* Search bar */
+.ip-form{
+    display: flex;
+    justify-content: center;
+    width: 38.54vw;
+    height: 7.3vh;
+    padding: 0;
+    margin: 3.03vh 0 0 0;
+}
+
 input[type=text] {
-    width: 25em;
-    padding: 12px 12px;
-    border-radius: 0.8em;
-    font-size: 1em;
+    width: 89.54%;
+    height: 100%;
+
+
+    padding: 0 0 0 4.5%;
+    border: 0;
+
+
+    outline: none; 
+    border-radius: 0.8em 0 0 0.8em;
+    font-size: 1.155em;
     transition: 1s;
   }
 
 /* Submit button arrow */
 .submit-btn {
+     width: 10.45%;
+     height: 100%;
+
     background-color: black;
-    padding: 15.8px;
+    background-size: 1px 1px;
+    border: 0;
+    border-radius: 0px 15px 15px 0px;
+    transition: ease-in-out .1s;
 }
 
-input.submit-btn {
-    margin-left: -18px;
-    margin-bottom: -17.5px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+.submit-btn:hover{
+    cursor: pointer;
+    background-color: rgb(61, 61, 61);
 }
+
+
+.light-switch{
+    display: none;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* Info Section */
 .info-section {
     display: flex; 
     justify-content: center;
-    width: 80%;
-    height: 120px;
+
+    width: auto;
+    height: 20.3vh;
+
+
     margin: auto;
-    border-radius: 10px;
-    margin-top: -60px;
+    border-radius: 15px;
+    margin-top: -10.2vh;
+    padding: 0 0 0 0;
+
     background-color: white;
     z-index: 2;
     position: relative;
@@ -60,25 +107,54 @@ input.submit-btn {
 }
 
 .info-section > div {
-    width: 270px;
+    width: 17.9vw;
     padding: 10px 0 0 10px;
     margin: 5px;
+    height: 8vh;
+}
+
+.info-section > div::after {
+    content: '';
+    position: absolute;
+    top: 27%;
+    margin-left: -15px;
+
+    width: 1px; 
+    height: 45%;
+    background: rgb(198, 187, 187);
+}
+
+.ip-title::after {
+content: none !important;
 }
 
 .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
     text-transform: uppercase;
     font-weight: 800;
     opacity: 0.5;
-    font-size: 0.7rem;
+    font-size: .75rem;
     letter-spacing: 1px;
-    margin-bottom: -10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-left: 16px;
 }
 
 .ip, .location, .timez, .isp {
     font-size: 1.5em;
     font-weight: bold;
-    padding-top: -5px;
+    margin-left: 16px;
 }
+
+.ip p, .location p, .timez p, .isp p {
+margin: 0;
+width: 70%;
+}
+
+
+
+
+
+
 
 /* Zoom in and Zoom out controls */
 .leaflet-container .leaflet-control-zoom-in {
@@ -93,7 +169,7 @@ input.submit-btn {
 #map {
     height: 790px;
     width: 100%; 
-    margin-top: -60px;
+    margin-top: -10vh;
     z-index: 1;
 }
 
@@ -103,110 +179,78 @@ input.submit-btn {
 
 /* Extra large screens, TV */
 @media only screen and (min-width: 1201px) {
-    .info-section {
-        width: 80%;
-        height: 120px;
-        margin-top: -60px;
-        transition: 1s;
-    }
+ 
 }
 
 /* Desktops, large screens */
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
     input[type=text] {
-        width: 22em;
-        transition: 1s;
+    
+
       }
     .info-section {
-        width: 90%;
-        transition: 1s;
-        height: 100px;
-        font-size: 0.9rem;
+     
     }
     .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
-        font-size: 0.65rem;
+       
     }
 }
 
 /* Small screens, laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     input[type=text] {
-        width: 20em;
-        padding: 11px;
-        font-size: 1em;
-        transition: 1s;
+     
       }
     .submit-btn {
-        padding: 15px;
-        transition: 1s;
+     
     }
     
     input.submit-btn {
-        margin-left: -18px;
-        margin-bottom: -17px;
+      
     }
     .info-section {
-        width: 90%;
-        transition: 1s;
-        padding: 0;
-        height: 90px;
-        font-size: 0.8rem;
+     
     }
     .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
-        font-size: 0.6rem;
+        
     }
 }
 
 /* iPads, Tablets */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     input[type=text] {
-        width: 20em;
-        padding: 10px;
-        font-size: 0.9em;
-        transition: 1s;
+        
       }
     .submit-btn {
-        padding: 13px;
-        transition: 1s;
+       
     }
     
     input.submit-btn {
-        margin-left: -18px;
-        margin-bottom: -15px;
+      
     }
     .info-section {
-        width: 90%;
-        transition: 1s;
-        padding: 0;
-        height: 80px;
-        font-size: 0.7rem;
+   
     }
     .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
-        font-size: 0.5rem;
+    
     }
   }
 
 /* Mobile devices */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     input[type=text] {
-        width: 18em;
-        padding: 10px;
-        font-size: 0.8em;
-        transition: 1s;
+    
       }
     .info-section {
-        width: 90%;
-        transition: 1s;
-        max-height: 70px;
-        font-size: 0.5rem;
+      
     }
     .ip-title > p, .location-title > p, .timezone-title > p, .isp-title > p {
-        font-size: 0.5rem;
+     
     }
     .leaflet-container .leaflet-control-zoom-in {
-        display: block;
+     
     }
     .leaflet-container .leaflet-control-zoom-out {
-        display: block;
+       
     }
   }
