@@ -225,9 +225,18 @@ main {
 /*mobile screens*/
 
 @media (max-width: 37em) {
+   header h1{
+    font-size: 1.6em;
+   }
+
   .ip-form {
-    width: 60vw;
+    width: 87vw;
     height: 7.3vh;
+    margin-top: 3.5vh;
+  }
+
+  .submit-btn {
+    width: 20%;
   }
 
   .info-section {
@@ -237,19 +246,24 @@ main {
     text-align: center;
     height: auto;
     width: 87vw;
+    margin-top: -15vh;
   }
 
   .info-section > div {
     width: auto;
-    margin: 3vh 0 0 0;
     padding: 0;
-    height: 8vh;
+    margin: 0;
   }
+
+  .ip-title{
+    margin-top: 3vh !important;
+   }
 
   .ip-title > p,
   .location-title > p,
   .timezone-title > p,
   .isp-title > p {
+    font-size: .6em;
     margin: 0;
     padding: 0;
   }
@@ -259,6 +273,8 @@ main {
   .timez p,
   .isp p {
     width: auto;
+    margin-top: 1vh;
+    font-size: 1.45em;
   }
 
   .info-section > div::after {
