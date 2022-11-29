@@ -38,6 +38,9 @@ h1 {
   justify-content: center;
   width: 38.54vw;
   height: 7.3vh;
+
+
+  
   padding: 0;
   margin: 3.03vh 0 0 0;
   z-index: 4;
@@ -94,7 +97,7 @@ main {
   justify-content: center;
 
   width: auto;
-  height: 20.3vh;
+  height: auto;
 
   margin: auto;
   margin-top: -10.2vh;
@@ -114,7 +117,7 @@ main {
 .info-section > div {
   width: 17.9vw;
   padding: 10px 0 0 10px;
-  margin: 5px;
+  margin: 5px 5px 10.3vh 5px;
   height: 8vh;
 }
 

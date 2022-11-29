@@ -84,7 +84,7 @@ ipform.addEventListener("submit", (e) => {
 function updateInfo(ip,loc,tz,isp){
 $('.ip').text(ip);
 $('.location').text(loc);
-$('.timez').text(tz);
+$('.timez').text('UTC ' + tz);
 $('.isp').text(isp);
 }
 
