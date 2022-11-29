@@ -40,7 +40,7 @@ let MarkerIcon = L.icon({
 // Spawn marker and focus view on it (Takes an array for the cords)
 function updateView(cords = [0, 0]) {
   L.marker(cords, {icon: MarkerIcon}).addTo(map);
-  map.setView(cords, 18);
+  map.setView(cords, 17);
   console.log('set new view to ' + cords);
 }
 
@@ -89,6 +89,6 @@ $('.isp').text(isp);
 }
 
 
-updateView([43.73154448301715, 7.41508082115684]);
+updateView([43.73148633493864, 7.415333727409318]);
 
 
